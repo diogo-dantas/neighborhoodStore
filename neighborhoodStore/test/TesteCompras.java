@@ -16,15 +16,23 @@ public class TesteCompras {
 
 		ArrayList<Compra> registro = new ArrayList<Compra>();
 
-		registro.add(c1);
 		registro.add(c2);
+		registro.add(c1);
 		registro.add(c3);
 
 		System.out.println(registro);
 
 		Collections.sort(registro);
-		
+
+		System.out.println(registro);
+
+		Compra c4 = new Compra("Bala Juquinha", 0.15);
+
+		registro.add(c4);
+
 		registro.sort(Comparator.comparing(Compra::getValor));
+
+		System.out.println(registro);
 
 	}
 
