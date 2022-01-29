@@ -11,7 +11,7 @@ public class Compra implements Comparable<Compra>{
 
 	}
 
-	public String getProdutos() {
+	public String getProduto() {
 		return produto;
 	}
 
@@ -26,7 +26,7 @@ public class Compra implements Comparable<Compra>{
 
 	@Override
 	public int compareTo(Compra outraCompra) {
-		return this.produto.compareTo(outraCompra.produto) ;
+		return this.produto.compareTo(outraCompra.getProduto()) ;
 	}
 
 }

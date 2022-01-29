@@ -2,6 +2,7 @@ package br.com.neighborhoodStore.test;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 import br.com.neighborhoodStore.model.Compra;
 
@@ -22,6 +23,8 @@ public class TesteCompras {
 		System.out.println(registro);
 
 		Collections.sort(registro);
+		
+		registro.sort(Comparator.comparing(Compra::getValor));
 
 	}
 
