@@ -22,5 +22,9 @@ public class Cliente {
 	public int getSocio() {
 		return socio;
 	}
+	
+	public List<Compra> getCompras() {
+		return compras;
+	}
 
 }
