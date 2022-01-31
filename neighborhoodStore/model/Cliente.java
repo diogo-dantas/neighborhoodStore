@@ -32,5 +32,13 @@ public class Cliente {
 		this.compras.add(c);
 	}
 
+	public double getValorTotal() {
+		double valorTotal = 0;
+
+		for (Compra compra : compras) {
+			valorTotal += compra.getValor();
+		}
+		return valorTotal;
+	}
 
 }

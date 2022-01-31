@@ -28,19 +28,18 @@ public class TesteCompras {
 		cl1.adiciona(c4);
 
 		System.out.println(cl1.getCompras());
-		
+
 		List<Compra> comprasOrdenadas = new ArrayList<>(cl1.getCompras());
-		
+
 		Collections.sort(comprasOrdenadas);
-		
+
 		System.out.println("Ordem alfabética: " + comprasOrdenadas);
-		
+
 		comprasOrdenadas.sort(Comparator.comparing(Compra::getValor));
-		
+
 		System.out.println("Classificação por valor:" + comprasOrdenadas);
-		
 
-
+		System.out.println("O valor total das compras do cliente " + cl1.getNome() + " é de: R$ " + cl1.getValorTotal());
 
 	}
 
