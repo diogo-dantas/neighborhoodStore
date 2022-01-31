@@ -1,8 +1,8 @@
 package br.com.neighborhoodStore.test;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.LinkedList;
 import java.util.List;
 
 import br.com.neighborhoodStore.model.Cliente;
@@ -28,12 +28,19 @@ public class TesteCompras {
 		cl1.adiciona(c4);
 
 		System.out.println(cl1.getCompras());
+		
+		List<Compra> comprasOrdenadas = new ArrayList<>(cl1.getCompras());
+		
+		Collections.sort(comprasOrdenadas);
+		
+		System.out.println("Ordem alfabética: " + comprasOrdenadas);
+		
+		comprasOrdenadas.sort(Comparator.comparing(Compra::getValor));
+		
+		System.out.println("Classificação por valor:" + comprasOrdenadas);
+		
 
-//		O método sort abaixo citado não funciona mais devido a aplicação do recurso unmodifiableList no método getCompras
-//		O  método não permite que a lista seja alterada sem ser na sua classe de origem (Cliente).
-//
-//		Collections.sort(cl1.getCompras());
-//		cl1.getCompras().sort(Comparator.comparing(Compra::getValor));
+
 
 	}
 
