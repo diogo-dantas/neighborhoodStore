@@ -32,9 +32,14 @@ public class Cliente {
 		this.compras.add(c);
 	}
 
-	//implementação do método através da sintaxe do Java 8
+	// implementação do método através da sintaxe do Java 8
 	public double getValorTotal() {
 		return this.compras.stream().mapToDouble(Compra::getValor).sum();
+	}
+
+	@Override
+	public String toString() {
+		return "Cliente: " + this.nome + "\nRegistro de sócio número: " + this.socio;
 	}
 
 }

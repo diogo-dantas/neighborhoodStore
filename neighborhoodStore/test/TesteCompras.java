@@ -39,7 +39,10 @@ public class TesteCompras {
 
 		System.out.println("Classificação por valor:" + comprasOrdenadas);
 
-		System.out.println("O valor total das compras do cliente " + cl1.getNome() + " é de: R$ " + cl1.getValorTotal());
+		System.out
+				.println("O valor total das compras do cliente " + cl1.getNome() + " é de: R$ " + cl1.getValorTotal());
+
+		System.out.println(cl1);
 
 	}
 
