@@ -32,13 +32,9 @@ public class Cliente {
 		this.compras.add(c);
 	}
 
+	//implementação do método através da sintaxe do Java 8
 	public double getValorTotal() {
-		double valorTotal = 0;
-
-		for (Compra compra : compras) {
-			valorTotal += compra.getValor();
-		}
-		return valorTotal;
+		return this.compras.stream().mapToDouble(Compra::getValor).sum();
 	}
 
 }
