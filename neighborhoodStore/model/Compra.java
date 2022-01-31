@@ -1,6 +1,6 @@
 package br.com.neighborhoodStore.model;
 
-public class Compra implements Comparable<Compra>{
+public class Compra implements Comparable<Compra> {
 
 	private String produto;
 	private double valor;
@@ -26,7 +26,7 @@ public class Compra implements Comparable<Compra>{
 
 	@Override
 	public int compareTo(Compra outraCompra) {
-		return this.produto.compareTo(outraCompra.getProduto()) ;
+		return this.produto.compareTo(outraCompra.getProduto());
 	}
 
 }

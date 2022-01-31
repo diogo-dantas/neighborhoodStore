@@ -1,5 +1,6 @@
 package br.com.neighborhoodStore.model;
 
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -22,9 +23,14 @@ public class Cliente {
 	public int getSocio() {
 		return socio;
 	}
-	
+
 	public List<Compra> getCompras() {
-		return compras;
+		return Collections.unmodifiableList(compras);
 	}
+
+	public void adiciona(Compra c) {
+		this.compras.add(c);
+	}
+
 
 }
