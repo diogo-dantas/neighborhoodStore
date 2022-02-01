@@ -11,7 +11,9 @@ public class Cliente {
 	List<Compra> compras = new LinkedList<Compra>();
 
 	public Cliente(String nome, int socio) {
-
+		if (nome == null) {
+			throw new NullPointerException("O nome não pode ser nulo.");
+		}
 		this.nome = nome;
 		this.socio = socio;
 	}
