@@ -10,6 +10,7 @@ public class Compra implements Comparable<Compra> {
 		this.valor = valor;
 
 	}
+	
 
 	public String getProduto() {
 		return produto;

@@ -8,6 +8,7 @@ public class Cliente {
 
 	private String nome;
 	private int socio;
+
 	List<Compra> compras = new LinkedList<Compra>();
 
 	public Cliente(String nome, int socio) {
@@ -15,6 +16,7 @@ public class Cliente {
 			throw new NullPointerException("O nome não pode ser nulo.");
 		}
 		this.nome = nome;
+
 		this.socio = socio;
 	}
 
@@ -41,7 +43,7 @@ public class Cliente {
 
 	@Override
 	public String toString() {
-		return "Cliente: " + this.nome + "\nRegistro de sócio número: " + this.socio;
+		return "Cliente: " + this.nome + "\nRegistro de sócio número: " + socio;
 	}
 
 }

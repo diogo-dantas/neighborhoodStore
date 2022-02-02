@@ -13,6 +13,9 @@ public class TesteCompras {
 	/**
 	 * @param args
 	 */
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 
 		Compra c1 = new Compra("Alface", 3.0);
@@ -44,6 +47,17 @@ public class TesteCompras {
 
 		System.out.println(cl1);
 
+		Cliente cl2 = new Cliente("Leticia Scarpin", 2);
+
+		Compra c5 = new Compra("Tangerina", 5.9);
+		Compra c6 = new Compra("Uva", 13.18);
+		Compra c7 = new Compra("Aveia", 5.0);
+
+		cl2.adiciona(c5);
+		cl2.adiciona(c6);
+		cl2.adiciona(c7);
+
+		System.out.println(cl2);
 	}
 
 }
